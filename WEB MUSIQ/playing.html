@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Playing</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+  <link rel='stylesheet prefetch' href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/8.3.0/nouislider.min.css'>
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    function goToPage(pageUrl) {
+        window.location.href = pageUrl;
+    }
+
+    function goBack() {
+      window.history.back();
+    }
+
+    function goForward() {
+      window.history.forward();
+    }
+  </script>
+</head>
+
+<body>
+  <section class="header">
+  <div class="page-flows">
+    <span class="flow" onclick="goBack()">
+      <i class="ion-chevron-left"></i>
+    </span>
+    <span class="flow" onclick="goForward()">
+      <i class="ion-chevron-right"></i>
+    </span>
+  </div>
+
+  <div class="search">
+    <input type="text" placeholder="Search" />
+  </div>
+  <div class="user">
+    <div class="user__info">
+      <span class="user__info__img">
+        <img src="assets/mozart.jpg" alt="Profile Picture" class="img-responsive" />
+      </span>
+      <span class="user__info__name">
+        <span class="first">James Bond</span>
+      </span>
+    </div>
+    
+    <div class="user__actions">
+      <div class="dropdown">
+        <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <i class="ion-chevron-down"></i>
+        </button>
+
+        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+          <li><a href="#">Account</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#" onclick="goToPage('login.html')">Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content">
+
+  <div class="content__left">
+  
+    <section class="navigation">
+
+        <!-- Main -->
+        <div class="navigation__list">
+
+          <div class="navigation__list__header" 
+               role="button" 
+               data-toggle="collapse" 
+               href="#main" 
+               aria-expanded="true" 
+               aria-controls="main">
+            Main
+          </div>
+          
+          <div class="collapse in" id="main">
+          
+            <a href="#" class="navigation__list__item" onclick="goToPage('home.html')">
+              <i class="icon ion-ios-home-outline"></i>
+              <span>Home</span>
+            </a>
+
+            <a href="#" class="navigation__list__item" onclick="goToPage('explore.html')">
+              <i class="icon ion-ios-world-outline"></i>
+              <span>Explore</span>
+            </a>
+            
+          </div>
+
+        </div>
+
+
+        <!-- Your Music -->
+        <div class="navigation__list">
+
+          <div class="navigation__list__header" 
+               role="button" 
+               data-toggle="collapse" 
+               href="#Artists" 
+               aria-expanded="true" 
+               aria-controls="Artists">
+            Artists
+          </div>
+          
+          <div class="collapse in" id="Artists">
+
+            <a href="#" class="navigation__list__item" onclick="goToPage('kordhell.html')">
+              <span>KORDHELL</span>
+            </a>
+
+            <a href="#" class="navigation__list__item">
+              <span>Lady Gaga</span>
+            </a>
+
+            <a href="#" class="navigation__list__item">
+              <span>Imagine Dragons</span>
+            </a>
+          </div>
+
+        </div>
+        <!-- / -->
+
+        <!-- Playlists -->
+        <div class="navigation__list">
+
+          <div class="navigation__list__header" 
+               role="button" 
+               data-toggle="collapse" 
+               href="#playlists" 
+               aria-expanded="true" 
+               aria-controls="playlists">
+            Playlists
+          </div>
+          
+          <div class="collapse in" id="playlists">
+          
+            <a href="#" class="navigation__list__item" onclick="goToPage('myplaylist.html')">
+              <i class="ion-ios-musical-notes"></i>
+              <span>My Playlist</span>
+              <i class="fas fa-trash-alt"></i>
+            </a>
+
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-musical-notes"></i>
+              <span>Hardcore</span>
+              <i class="fas fa-trash-alt"></i>
+            </a>
+
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-musical-notes"></i>
+              <span>DJ angkot</span>
+              <i class="fas fa-trash-alt"></i>
+            </a>
+
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-musical-notes"></i>
+              <span>Phonk</span>
+              <i class="fas fa-trash-alt"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+      
+    <section class="playlist">
+      <a href="#">
+        <i class="ion-ios-plus-outline"></i>
+        New Playlist
+      </a>
+    </section>
+    <section class="playing">
+      <div class="playing__art">
+        <img src="assets/theweeknd2.png" alt="The Weeknd" />
+      </div>
+
+      <div class="playing__song">
+        <a class="playing__song__name">Blinding Lights</a>
+        <a class="playing__song__artist">The Weeknd</a>
+      </div>
+    </section>
+  </div>
+  
+  <div class="content__middle">
+    <div class="artist is-verified">
+      <div class="artist__header">
+        <div class="artist__info">
+          <div class="profile__img">
+            <img src="assets/theweeknd2.png" alt="photo profil" />
+          </div>
+          
+          <div class="artist__info__meta">            
+            <div class="artist__info__name">THE WEEKND</div>           
+            <div class="artist__info__actions">                                   
+            </div>            
+          </div>          
+        </div>
+        
+        <div class="artist__navigation">        
+          <ul class="nav nav-tabs" role="tablist">            
+            <li role="presentation" class="active">
+              <a href="#artist-overview" aria-controls="artist-overview" role="tab" data-toggle="tab">Overview</a>
+            </li>
+          </ul> 
+        </div>  
+      </div>
+
+      <div class="artist__content">      
+        <div class="tab-content">      
+          <div role="tabpanel" class="tab-pane active" id="artist-overview">           
+            <div class="overview">           
+              <div class="overview__artist">            
+                <div class="latest-release">
+                  <div class="latest-release__art">
+                    <img src="assets/blinding.png" alt="The Weeknd" />
+                  </div>
+
+                  <div class="latest-release__song">
+                    <div class="latest-release__song__title">Blinding Lights</div>
+                    <div class="latest-release__song__date">
+                      <span class="day">24</span>
+                      <span class="month">December</span>
+                      <span class="year">2020</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Popular-->
+                <div class="section-title" onclick="toggleLoremIpsum()">Lyrics</div>
+                <div id="lyrics" style="display: none; text-align: left; font-size:larger; color: white;">
+                  Yeah<br>
+                  I've been tryna call<br>
+                  I've been on my own for long enough<br>
+                  Maybe you can show me how to love, maybe<br>
+                  I'm going through withdrawals<br>
+                  You don't even have to do too much<br>
+                  You can turn me on with just a touch, baby<br>
+                  I look around and<br>
+                  Sin City's cold and empty (oh)<br>
+                  No one's around to judge me (oh)<br>
+                  I can't see clearly when you're gone<br>
+                  I said, ooh, I'm blinded by the lights<br>
+                  No, I can't sleep until I feel your touch<br>
+                  I said, ooh, I'm drowning in the night<br>
+                  Oh, when I'm like this, you're the one I trust<br>
+                  (Hey, hey, hey)<br>
+                  I'm running out of time<br>
+                  'Cause I can see the sun light up the sky<br>
+                  So I hit the road in overdrive, baby, oh<br>
+                  The city's cold and empty (oh)<br>
+                  No one's around to judge me (oh)<br>
+                  I can't see clearly when you're gone<br>
+                  I said, ooh, I'm blinded by the lights<br>
+                  No, I can't sleep until I feel your touch<br>
+                  I said, ooh, I'm drowning in the night<br>
+                  Oh, when I'm like this, you're the one I trust<br>
+                  I'm just walking by to let you know (by to let you know)<br>
+                  I can never say it on the phone (say it on the phone)<br>
+                  Will never let you go this time (ooh)<br>
+                  I said, ooh, I'm blinded by the lights<br>
+                  No, I can't sleep until I feel your touch<br>
+                  (Hey, hey, hey)<br>
+                  I said, ooh, I'm blinded by the lights<br>
+                  No, I can't sleep until I feel your touch<br>
+                </div>
+                <div class="tracks">
+                </div>
+              </div>  
+
+              <div class="overview__albums">              
+                <div class="overview__albums__head">                
+                  <span class="section-title">You Might Know</span>                  
+                  <span class="view-type">                    
+                  </span>                
+                </div>
+
+                <div class="tracks">
+                  <div class="track" id="track1">
+                    <div class="track__art">
+                        <img src="assets/theweeknd.png" alt="2" />
+                    </div>
+                    <div class="track__title">The Weeknd - Blinding Lights</div>
+                    <div class="track__plays">1:45</div>
+                    <audio id="myAudio1">
+                        <source src="assets/songs/The Weeknd - Blinding Lights.mp3">
+                    </audio>
+                </div>
+                
+                <div class="track" id="track2">
+                    <div class="track__art">
+                        <img src="assets/harrystyles.jpg" alt="3" />
+                    </div>
+                    <div class="track__title">Harry Styles - Watermelon Sugar</div>
+                    <div class="track__plays">2:50</div>
+                    <audio id="myAudio2">
+                        <source src="assets/songs/Harry Styles - Watermelon Sugar.mp3">
+                    </audio>
+                </div>
+                
+                <script>
+                    var audio1 = document.getElementById("myAudio1");
+                    var track1 = document.getElementById("track1");
+                    
+                    var audio2 = document.getElementById("myAudio2");
+                    var track2 = document.getElementById("track2");
+                
+                    track1.addEventListener("click", function() {
+                        toggleMusic(audio1);
+                    });
+                
+                    track2.addEventListener("click", function() {
+                        toggleMusic(audio2);
+                    });
+                
+                    function toggleMusic(audio) {
+                        if (audio.paused) {
+                            audio.play();
+                        } else {
+                            audio.pause();
+                        }
+                    }
+                </script>
+                
+
+                  <div class="track">
+                    <div class="track__art">
+                      <img src="assets/beyonce.jpg" alt="4" />
+                    </div>
+                    <div class="track__title">Megan Thee Stallion featuring Beyoncé</div>
+                    <div class="track__plays">7:52</div>
+                  </div>
+
+                  <div class="track">
+                    <div class="track__art">
+                      <img src="assets/dojacat.png" alt="5" />
+                    </div>
+                    <div class="track__title">Doja Cat - Say So</div>
+                    <div class="track__plays">6:12</div>
+                  </div>
+
+                  <div class="track">
+                    <div class="track__art">
+                      <img src="assets/dualipa.jpg" alt="6" />
+                    </div>
+                    <div class="track__title">Dua Lipa - Don't Start Now</div>
+                    <div class="track__plays">1:56</div>
+                  </div>
+
+                  <div class="track">
+                    <div class="track__art">
+                      <img src="assets/dababy.jpg" alt="7" />
+                    </div>
+                    <div class="track__title">DaBaby featuring Roddy Ricch - Rockstar</div>
+                    <div class="track__plays">3:22</div>
+                  </div>
+
+                  <div class="track">
+                    <div class="track__art">
+                      <img src="assets/harrystyles2.jpg" alt="8" />
+                    </div>
+                    <div class="track__title">Harry Styles - Adore You</div>
+                    <div class="track__plays">6:41</div>
+                  </div>
+
+                  <div class="track">
+                    <div class="track__art">
+                      <img src="assets/justinebieber.jpg" alt="9" />
+                    </div>
+                    <div class="track__title">Justin Bieber featuring Quavo - Intentions</div>
+                    <div class="track__plays">3:45</div>
+                  </div>
+
+                  <div class="track">
+                    <div class="track__art">
+                      <img src="assets/cardib.png" alt="10" />
+                    </div>
+                    <div class="track__title">Cardi B featuring Megan Thee Stallion - WAP</div>
+                    <div class="track__plays">1:23</div>
+                  </div>
+                  
+                  <div class="track">
+                    <div class="track__art">
+                      <img src="assets/radioactive.jpg" alt="11" />
+                    </div>
+                    <div class="track__title">Roddy Ricch - The Box"</div>
+                    <div class="track__plays">4:56</div>
+                  </div>
+
+                  <div class="track">
+                    <div class="track__art">
+                      <img src="assets/ladygaga.jpg" alt="12" />
+                    </div>
+                    <div class="track__title">Lady Gaga with Ariana Grande - Rain On Me</div>
+                    <div class="track__plays">7:12</div>
+                  </div>
+
+                  <div class="track">
+                    <div class="track__art">
+                      <img src="assets/moveyourbody.jpg" alt="13" />
+                    </div>
+                    <div class="track__title">Öwnboss, Sevek - Move Your Body</div>
+                    <div class="track__plays">8:23</div>
+                  </div>
+
+                  <div class="track">
+                    <div class="track__art">
+                      <img src="assets/future.jpg" alt="14" />
+                    </div>
+                    <div class="track__title">Future featuring Sia - Life Is Good</div>
+                    <div class="track__plays">2:13</div>
+                  </div>
+
+                  <div class="track">
+                    <div class="track__art">
+                      <img src="assets/topic.jpg" alt="15" />
+                    </div>
+                    <div class="track__title">Topic & A7S - Breaking Me</div>
+                    <div class="track__plays">2:16</div>
+                  </div>
+
+                  <div class="track">
+                    <div class="track__art">
+                      <img src="assets/24goldn.png" alt="16" />
+                    </div>
+                    <div class="track__title">24kGoldn featuring iann dior - Mood</div>
+                    <div class="track__plays">2:14</div>
+                  </div>
+
+                  <div class="track">
+                    <div class="track__art">
+                      <img src="assets/travisscott.jpg" alt="17" />
+                    </div>
+                    <div class="track__title">Travis Scott - Sicko Mode</div>
+                    <div class="track__plays">3:19</div>
+                  </div>
+
+                  <div class="track">
+                    <div class="track__art">
+                      <img src="assets/arizona.jpg" alt="18" />
+                    </div>
+                    <div class="track__title">Arizona Zervas - ROXANNE</div>
+                    <div class="track__plays">4:56</div>
+                  </div>
+
+                  <div class="track">
+                    <div class="track__art">
+                      <img src="assets/dojacat2.jpg" alt="19" />
+                    </div>
+                    <div class="track__title">Doja Cat - Boss Bitch</div>
+                    <div class="track__plays">4:23</div>
+                  </div>
+
+                  <div class="track">
+                    <div class="track__art">
+                      <img src="assets/kordhell mempis doom.jpg" alt="20" />
+                    </div>
+                    <div class="track__title">KORDHELL - Mempis Doom</div>
+                    <div class="track__plays">4:36</div>
+                  </div>
+                  </div>                 
+                </div>               
+              </div>             
+            </div>          
+          </div>
+        </div>        
+      </div>     
+    </div>   
+  </div>
+  
+  <div class="content__right">
+    <div class="social">
+      <div class="friends">     
+        <a href="#" class="friend">       
+          <i class="ion-android-person"></i>         
+          Sam Smith          
+        </a>
+        
+        <a href="#" class="friend">        
+          <i class="ion-android-person"></i>          
+          Tarah Forsyth         
+        </a>
+        
+        <a href="#" class="friend">        
+          <i class="ion-android-person"></i>          
+          Ricahrd Tomkins         
+        </a>       
+      </div>
+
+      <button class="button-light">Find Friends</button>      
+    </div>    
+  </div>
+</section>
+
+<section class="current-track">
+  <audio id="myAudio">
+    <source src="assets/songs/The Weeknd - Blinding Lights.mp3">
+  </audio>
+  <div class="current-track__actions"> 
+    <a class="ion-ios-skipbackward"></a>    
+    <a class="ion-ios-play play"></a>    
+    <a class="ion-ios-skipforward"></a>
+    <audio id="myAudio">
+      <source src="assets/songs/KORDHELL - SHOOT TO KILL.mp3">
+    </audio>   
+  </div>
+  
+  <div class="current-track__progress">  
+    <div class="current-track__progress__start">0:01</div>    
+    <div class="current-track__progress__bar">     
+      <div id="song-progress"></div>      
+    </div>
+    
+    <div class="current-track__progress__finish">3:07</div>    
+  </div>
+  
+  <div class="current-track__options">  
+    <a href="#" class="lyrics">Lyrics</a>   
+    <span class="controls">   
+      <a href="#" class="control">
+        <i class="ion-navicon"></i>
+      </a>
+      
+      <a href="#" class="control">
+        <i class="ion-shuffle"></i>
+      </a>
+      
+      <a href="#" class="control">
+        <i class="fa fa-refresh"></i>
+      </a>
+      
+      <a href="#" class="control devices">
+        <i class="ion-iphone"></i>
+        <span>Devices Available</span>
+      </a>
+      
+      <a href="#" class="control volume">        
+        <i class="ion-volume-high"></i>     
+        <div id="song-volume"></div>        
+      </a>     
+    </span>   
+  </div> 
+</section>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/8.3.0/nouislider.min.js'></script>
+    <script src="js/index.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Initialize audio player with your audio element
+        initializeAudio(document.getElementById("myAudio"));
+      });
+  </script>
+</body>
+</html>

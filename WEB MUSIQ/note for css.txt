@@ -1,0 +1,8 @@
+#1ed760 green
+#181818 black
+#282828 semi black
+#c8c8c8 semi white
+#5e5e5e grey
+rgb(206, 18, 153); violet
+background: linear-gradient(300.60deg, #282828 30%, rgb(206, 18, 153) 89.22%);
+border-radius: 15%;
